@@ -4,6 +4,7 @@ import static localhost.test_gcm.CommonUtilities.SENDER_ID;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.util.Log;
 
 import com.google.android.gcm.GCMBaseIntentService;
@@ -28,7 +29,10 @@ public class GCMIntentService extends GCMBaseIntentService {
 
     @Override
     protected void onMessage(Context context, Intent intent) {
-        Log.i(CommonUtilities.TAG_GCM, "Received message");       
+    	Bundle extras = intent.getExtras();
+    	String message = extras.getString("message");
+        Log.i(CommonUtilities.TAG_GCM, "Received message:" + message);       
+        
     }
     
     @Override

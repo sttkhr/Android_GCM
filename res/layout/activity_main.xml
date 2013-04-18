@@ -15,4 +15,9 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content" 
       android:text="GCM解除"/>
+    <Button
+      android:id="@+id/btn_msg_send"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" 
+      android:text="メッセージ送信"/>    
 </LinearLayout>
